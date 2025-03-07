@@ -1,0 +1,88 @@
+.container {
+  position: fixed;
+  top: 25px;
+  left: 35%;
+  width: 500px;
+  height: 610px;
+  background-color: #c36363;
+  z-index: 1050;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+
+  .close {
+    text-align: right;
+    width: 100%;
+    height: 45px;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  width: 80%;
+  height: 30px;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  // margin-top: 5px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.nameField {
+  margin-top: 30px;
+  width: 100%;
+  height: 30px;
+
+  input {
+    font-size: 1.3rem;
+  }
+}
+
+.usersField {
+  display: flex;
+  margin-top: 20px;
+  width: 70%;
+  height: 30px;
+
+  input {
+    font-size: 1.3rem;
+    margin-right: 10px;
+  }
+}
+
+.createChat {
+  width: 100%;
+  height: 40px;
+  margin-top: 25px;
+  text-align: right;
+}
+
+.badge {
+  margin-top: 15px;
+  height: 60px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-y: auto;
+  padding: 5px;
+  background-color: rgb(213, 149, 71);
+}
+
+.addUsers {
+  margin-top: 25px;
+  width: 100%;
+  height: 230px;
+  padding: 5px;
+  background-color: #5ed3e0;
+  overflow-y: auto;
+}

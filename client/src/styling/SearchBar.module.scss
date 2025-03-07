@@ -1,0 +1,112 @@
+.container {
+  top: 0px;
+  left: -300px;
+  width: 300px;
+  height: 100vh;
+  padding: 10px;
+  // position: relative;
+  position: fixed;
+  background-color: #58babe;
+  transition: left 0.6s ease-in-out;
+
+  &.show {
+    left: 0px;
+  }
+
+  &.hide {
+    left: -300px;
+  }
+}
+
+.heading {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.close {
+  button {
+    width: 25px;
+    // height: 10px;
+  }
+}
+
+.search {
+  width: 100%;
+  display: flex;
+}
+
+.field {
+  width: 70%;
+}
+
+input {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.go {
+  width: 30%;
+  margin-left: 5px;
+}
+
+.go button {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.users{
+  margin-top: 10px;
+  padding: 5px;
+  width: 100%;
+  height: 550px;
+  overflow-y: auto;
+  background-color: #883131;
+}
+
+.customUser {
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 8px;
+  height: 80px;
+  display: flex;
+  background-color: #8ade2b;
+}
+.pic {
+  border-radius: 50%;
+  height: 60px;
+  width: 80px;
+  // background-color: #c750c1;
+
+  img {
+    height: 100%;
+    border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.details {
+  position: relative;
+  width: 60%;
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 5px;
+  // height: 100%;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-spinner {
+  font-size: 1.5rem;
+}

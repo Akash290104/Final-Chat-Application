@@ -1,0 +1,47 @@
+.container{
+  height: 600px;
+  width: 500px;
+  background-color: #5557d6;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 15px;
+  overflow-y:auto;
+}
+
+.content{
+  padding: 10px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background-color: #28c02d;
+  justify-content: space-between;
+}
+
+.text{
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.groupChatbtn{
+  button{
+    background-color: aqua;
+  }
+}
+
+//For the senderChat
+.senderContainer{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  width: 90%;
+  height: 40px;
+  // background-color: #32afc6
+  border-radius: 5px;
+  // padding: 10px;
+}
+
+// .senderList{
+//   width : 100%;
+//   height: 200px;
+//   padding: 5px;
+// }

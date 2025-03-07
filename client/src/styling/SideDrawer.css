@@ -1,0 +1,88 @@
+
+.navbar{
+  width: 100%;
+  background-color: #fff;
+  height : 60px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search{
+  display: flex;
+  width : 15%;
+  margin-left:  5px ;
+}
+
+.search-btn{
+  font-size: 1rem;
+  margin-left: 15px;
+}
+
+.search-bar{
+  width : 100%;
+}
+
+.text{
+  font-size: 1.5rem;
+}
+
+.notification{
+  display: flex;
+  margin: 0px 5px;
+}
+
+.bell{
+  display: none;
+  margin-right: 75px;
+  font-size: 1.5rem;
+  position: relative;
+  background-color: rgb(220, 201, 83);
+  width: 40px;
+  padding: 0px 10px;
+}
+
+.number{
+  position: absolute;
+  min-width: 20px;
+  max-width: 30px;
+  height: 20px;
+  top : -5px;
+  right : -10px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  background-color:red;
+  border-radius: 50%;
+}
+
+.notifications{
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width : 170px;
+  height : 60px;
+  cursor: pointer;
+  border-radius: 7px;
+  overflow-y: hidden;
+  background-color: rgb(89, 184, 178);
+  z-index: 1000;
+}
+
+.one{
+  width: 100%;
+  height : 30px;
+  font-size: 0.8rem;
+}
+
+.dropdown{
+  margin-right: 5px;
+}
+
+.profile-pic{
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  border-radius: 50%; /* Make it circular */
+  object-fit: cover;  
+}

@@ -1,0 +1,184 @@
+
+.container{
+  top: 40px;
+  left: 35%;
+  width: 600px;
+  height: 570px;
+  background-color: #dfa74b;
+  z-index: 1050;
+  position: fixed;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.backdrop{
+  top:0px;
+  left: 0px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1045;
+}
+
+
+.name{
+  width : 100%;
+  height : 50px;
+  display: flex;
+  justify-content: center;
+  // background-color: #ab2da9;
+}
+
+.closebtn{
+  width : 100%;
+  height: 20px;
+  text-align: right;
+}
+.chatname{
+  width : 100%;
+  display: flex;
+  justify-content: center;
+}
+.users{
+  margin-top: 10px;
+  padding: 5px 5px;
+  border-radius: 10px;
+  width : 100%;
+  height : 60px;
+  display: flex;
+  overflow-y:scroll;
+  background: #51cad5;
+}
+
+.nameUpdate{
+  margin-top: 5%;
+  width : 100%;
+  height : 45px;
+  display: flex;
+  align-items: center;
+  padding: 5px 5px;
+  border-radius: 10px;
+  background-color: #58c281;
+}
+
+.text{
+  width : 150px;
+  // height: 30px;
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.nameField{
+  width : 60%;
+  // height: 30px;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  border-radius: 10px;
+}
+
+
+.updateBtn{
+  width : 20%;
+  font-size: 1.2rem;
+  // height: 30px;
+}
+
+.addUsers {
+  margin-top: 25px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 200px;
+  padding: 5px 5px;
+  background-color: #d85f14;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.customUser {
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 8px;
+  width:90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 75px;
+  display: flex;
+  background-color: #8ade2b;
+}
+.pic {
+  border-radius: 50%;
+  height: 60px;
+  width: 80px;
+  // background-color: #c750c1;
+
+  img {
+    height: 100%;
+    border-radius: 50%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.details {
+  position: relative;
+  width: 60%;
+  padding-top: 10px;
+  margin-left: 10px;
+  margin-right: 5px;
+  // height: 100%;
+}
+
+.name1{
+
+  font-size: 1rem;
+}
+
+.mail{
+font-size: 1rem;
+}
+
+
+.badgecontainer{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 3%;
+  height : 45px;
+  width : 100px;
+  display: flex;
+  background-color: #8f22ce;
+  border-radius: 8px;
+
+  .badgecontent{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    height: 60px;
+  }
+}
+
+.badgename{
+  font-size: 1.2rem;
+width: 60%;
+height: 50px;
+}
+
+.badgeclose{
+width: 40%;
+margin-top: 5px;
+height: 25px;
+background-color: #8ade2b;
+text-align: right;
+  
+  button{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+  }
+}

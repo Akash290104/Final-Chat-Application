@@ -1,0 +1,20 @@
+.container {
+  margin-top: 40px;
+  background-color: rgb(227, 171, 93);
+  width: 50%;
+  /* max-height: 510px; */
+  height: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 15px;
+}
+
+.title {
+  background-color: brown;
+  width: 100%;
+  margin-left: auto;
+  text-align: center;
+  font-size: 2rem;
+  margin-right: auto;
+  font-family: work sans;
+}
