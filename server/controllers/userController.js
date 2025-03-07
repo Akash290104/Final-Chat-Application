@@ -17,8 +17,8 @@ const registerUser = asyncHandler(async (req, res) => {
       .json({ message: "Name, email and password are mandatory" });
   }
 
-  const existingUser = await User.findOne({ email });
-  if (existingUser) {
+  const existingUser2 = await User.findOne({ email });
+  if (existingUser2) {
     console.log("User already exists");
     return res.status(401).json({ message: "User already exists" });
   }
@@ -46,9 +46,11 @@ const registerUser = asyncHandler(async (req, res) => {
   const token = generateToken(createdUser._id);
   console.log("Token is ", token);
 
+  const existingUser = createdUser;
+
   return res
     .status(201)
-    .json({ message: "New user registered successfully", createdUser, token });
+    .json({ message: "New user registered successfully", existingUser, token });
 });
 
 const login = asyncHandler(async (req, res) => {

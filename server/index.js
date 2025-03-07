@@ -52,7 +52,7 @@ connectDB()
 
       socket.on("setup", (userData) => {
         console.log(userData);
-        socket.join(userData.existingUser._id);
+        socket.join(userData?.existingUser?._id);
         socket.emit("connected");
       });
 
