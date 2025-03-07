@@ -6,7 +6,10 @@ import ChatBox from "./ChatBox.jsx";
 import io from "socket.io-client";
 import { useContext } from "react";
 
-const ENDPOINT = "http://localhost:5000"; // Ensure this is HTTPS
+const ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? process.env.REACT_APP_BACKEND_LOCAL
+    : process.env.REACT_APP_BACKEND_DEPLOYED; // Ensure this is HTTPS
 let socket;
 
 const Chatpage = () => {

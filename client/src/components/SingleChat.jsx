@@ -13,7 +13,10 @@ import Lottie from "react-lottie";
 import animationData from "../animations/typing.json";
 import GetSender from "../config/GetSender";
 
-const ENDPOINT = "http://localhost:5000";
+const ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? process.env.REACT_APP_BACKEND_LOCAL
+    : process.env.REACT_APP_BACKEND_DEPLOYED;
 
 const SingleChat = ({ fetchAgain, setFetchAgain, socket, socketConnected }) => {
   const { user, selectedChat, setSelectedChat } = ChatState();

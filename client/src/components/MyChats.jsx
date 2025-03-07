@@ -5,6 +5,11 @@ import styles from "../styling/MyChats.module.scss";
 import GetSender from "../config/GetSender";
 import GroupChatModal from "./miscellaneous/GroupChatModal";
 
+const ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? process.env.REACT_APP_BACKEND_LOCAL
+    : process.env.REACT_APP_BACKEND_DEPLOYED;
+
 const MyChats = ({ fetchAgain, socket }) => {
   const [loggedUser, setLoggedUser] = useState();
   const { user, chats, setChats, setSelectedChat } = ChatState();
@@ -21,7 +26,7 @@ const MyChats = ({ fetchAgain, socket }) => {
         },
       };
       const response = await axios.get(
-        "http://localhost:5000/api/chat",
+          `${ENDPOINT}5000/api/chat`,
         config
       );
 
@@ -79,6 +84,7 @@ const MyChats = ({ fetchAgain, socket }) => {
     }
   }, [socket, setChats, setSelectedChat]);
 
+  
   useEffect(() => {
     setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
     fetchChats();

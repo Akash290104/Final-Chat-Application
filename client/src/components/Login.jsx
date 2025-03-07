@@ -2,6 +2,11 @@ import React, { useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? process.env.REACT_APP_BACKEND_LOCAL
+    : process.env.REACT_APP_BACKEND_DEPLOYED;
+
 const Login = () => {
   const emailElement = useRef();
   const passwordElement = useRef();
@@ -22,10 +27,10 @@ const Login = () => {
     const password = passwordElement.current.value;
 
     try {
-      const response = await axios.post(
-        "http://localhost:5000/api/user/login",
-        { email, password }
-      );
+      const response = await axios.post(`${ENDPOINT}/api/user/login`, {
+        email,
+        password,
+      });
 
       localStorage.setItem("userInfo", JSON.stringify(response.data));
 

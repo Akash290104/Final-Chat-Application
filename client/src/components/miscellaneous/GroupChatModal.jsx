@@ -7,6 +7,11 @@ import { ChatLoading } from "./SearchBar";
 import { debounce } from "../../config/debounce";
 import UserBadge from "./UserBadge";
 
+const ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? process.env.REACT_APP_BACKEND_LOCAL
+    : process.env.REACT_APP_BACKEND_DEPLOYED;
+
 const GroupChatModal = ({ children, hideGroupChatModal, socket }) => {
   const [groupChatName, setGroupChatName] = useState("");
   const [selectedUsers, setSelectedUsers] = useState([]);
@@ -45,7 +50,7 @@ const GroupChatModal = ({ children, hideGroupChatModal, socket }) => {
 
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/user?search=${query}`,
+        `${ENDPOINT}/api/user?search=${query}`,
         config
       );
       setLoading(false);
@@ -89,7 +94,7 @@ const GroupChatModal = ({ children, hideGroupChatModal, socket }) => {
       };
 
       const response = await axios.post(
-        "http://localhost:5000/api/chat/group",
+        `${ENDPOINT}/api/chat/group`,
         {
           name: groupChatName,
           users: selectedUsers.map((u) => u._id),

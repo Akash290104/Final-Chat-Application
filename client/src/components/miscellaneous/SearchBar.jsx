@@ -5,6 +5,11 @@ import { useState } from "react";
 import axios from "axios";
 import { debounce } from "../../config/debounce";
 
+const ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? process.env.REACT_APP_BACKEND_LOCAL
+    : process.env.REACT_APP_BACKEND_DEPLOYED;
+
 export const ChatLoading = () => {
   return (
     <button
@@ -63,7 +68,7 @@ const SearchBar = ({ isVisible, setIsVisible }) => {
       };
 
       const response = await axios.get(
-        `http://localhost:5000/api/user?search=${search}`,
+        `${ENDPOINT}/api/user?search=${search}`,
         config
       );
 
@@ -85,7 +90,7 @@ const SearchBar = ({ isVisible, setIsVisible }) => {
         },
       };
       const response = await axios.get(
-        "http://localhost:5000/api/chat",
+        `${ENDPOINT}/api/chat`,
         config
       );
 
@@ -110,7 +115,7 @@ const SearchBar = ({ isVisible, setIsVisible }) => {
       };
 
       const response = await axios.post(
-        `http://localhost:5000/api/chat`,
+        `${ENDPOINT}/api/chat`,
         { userId },
         config
       );

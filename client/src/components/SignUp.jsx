@@ -2,6 +2,11 @@ import React, { useRef, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? process.env.REACT_APP_BACKEND_LOCAL
+    : process.env.REACT_APP_BACKEND_DEPLOYED;
+
 const SignUp = () => {
   let name = useRef();
   let email = useRef();
@@ -83,7 +88,7 @@ const SignUp = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/user/register",
+        `${ENDPOINT}/api/user/register`,
         formData,
         {
           headers: {

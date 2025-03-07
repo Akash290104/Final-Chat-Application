@@ -5,6 +5,11 @@ import { ChatLoading } from "./SearchBar";
 import axios from "axios";
 import { debounce } from "../../config/debounce";
 
+const ENDPOINT =
+  process.env.NODE_ENV === "development"
+    ? process.env.REACT_APP_BACKEND_LOCAL
+    : process.env.REACT_APP_BACKEND_DEPLOYED;
+
 const UserBadge = ({ user, handleFunction }) => (
   <div className={styles.badgecontainer}>
     <div className={styles.badgecontent}>
@@ -57,7 +62,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const response = await axios.get(
-        `http://localhost:5000/api/user?search=${searchTerm}`,
+        `${ENDPOINT}/api/user?search=${searchTerm}`,
         config
       );
       setLoading(false);
@@ -89,7 +94,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const response = await axios.put(
-        "http://localhost:5000/api/chat/addtogroup",
+        `${ENDPOINT}/api/chat/addtogroup`,
         { chatId: selectedChat._id, userId: selectedUser?._id },
         config
       );
@@ -126,7 +131,7 @@ const UpdateGroupChatModal = ({
         },
       };
       const response = await axios.put(
-        "http://localhost:5000/api/chat/removefromgroup",
+        `${ENDPOINT}/api/chat/removefromgroup`,
         { chatId: selectedChat._id, userId: selectedUser?._id },
         config
       );
@@ -169,7 +174,7 @@ const UpdateGroupChatModal = ({
       };
 
       const response = await axios.put(
-        "http://localhost:5000/api/chat/rename",
+        `${ENDPOINT}/api/chat/rename`,
         { id: selectedChat._id, name: groupchatName },
         config
       );
