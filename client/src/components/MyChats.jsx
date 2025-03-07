@@ -26,7 +26,7 @@ const MyChats = ({ fetchAgain, socket }) => {
         },
       };
       const response = await axios.get(
-          `${ENDPOINT}5000/api/chat`,
+          `${ENDPOINT}/api/chat`,
         config
       );
 
