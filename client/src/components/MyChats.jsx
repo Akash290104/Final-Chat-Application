@@ -154,7 +154,9 @@ const ChatSender = ({ name, chat }) => {
         backgroundColor: chat._id === selectedChat?._id ? "#32afc6" : "grey",
       }}
     >
+      <div className={styles.senderText}>
       {name}
+      </div>
     </div>
   );
 };

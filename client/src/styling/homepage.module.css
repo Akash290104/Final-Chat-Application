@@ -1,5 +1,10 @@
+.wrapper{
+  padding-top: 40px;
+}
+
 .container {
-  margin-top: 40px;
+  /* margin-top: 40px;  */
+  /* top: 40px; */
   background-color: rgb(227, 171, 93);
   width: 50%;
   /* max-height: 510px; */

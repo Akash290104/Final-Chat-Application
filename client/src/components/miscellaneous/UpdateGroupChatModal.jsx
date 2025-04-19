@@ -4,34 +4,37 @@ import { ChatState } from "../../context/chatProvider";
 import { ChatLoading } from "./SearchBar";
 import axios from "axios";
 import { debounce } from "../../config/debounce";
+import UserBadge from "./UserBadge";
+// import User from "./SearchBar"
+import { User } from "./SearchBar";
 
 const ENDPOINT =
   process.env.NODE_ENV === "development"
     ? process.env.REACT_APP_BACKEND_LOCAL
     : process.env.REACT_APP_BACKEND_DEPLOYED;
 
-const UserBadge = ({ user, handleFunction }) => (
-  <div className={styles.badgecontainer}>
-    <div className={styles.badgecontent}>
-      <div className={styles.badgename}>{user?.name}</div>
-      <div className={styles.badgeclose}>
-        <button onClick={handleFunction}>X</button>
-      </div>
-    </div>
-  </div>
-);
+// const UserBadge = ({ user, handleFunction }) => (
+//   <div className={styles.badgecontainer}>
+//     <div className={styles.badgecontent}>
+//       <div className={styles.badgename}>{user?.name}</div>
+//       <div className={styles.badgeclose}>
+//         <button onClick={handleFunction}>X</button>
+//       </div>
+//     </div>
+//   </div>
+// );
 
-const User = ({ user, handleFunction }) => (
-  <div className={styles.customUser} onClick={handleFunction}>
-    <div className={styles.pic}>
-      <img src={user?.pic} alt="User" />
-    </div>
-    <div className={styles.details}>
-      <div className={styles.name1}>{user?.name}</div>
-      <div className={styles.mail}>{user?.email}</div>
-    </div>
-  </div>
-);
+// const User = ({ user, handleFunction }) => (
+//   <div className={styles.customUser} onClick={handleFunction}>
+//     <div className={styles.pic}>
+//       <img src={user?.pic} alt="User" />
+//     </div>
+//     <div className={styles.details}>
+//       <div className={styles.name1}>{user?.name}</div>
+//       <div className={styles.mail}>{user?.email}</div>
+//     </div>
+//   </div>
+// );
 
 const UpdateGroupChatModal = ({
   hideUpdateModal,
@@ -206,6 +209,8 @@ const UpdateGroupChatModal = ({
   return (
     <div className={styles.backdrop}>
       <div className={styles.container}>
+        <div className={styles.heading}>
+          <div className={styles.name}>{selectedChat.chatName}</div>
         <div className={styles.closebtn}>
           <button
             onClick={() => {
@@ -216,7 +221,7 @@ const UpdateGroupChatModal = ({
             X
           </button>
         </div>
-        <div className={styles.name}>{selectedChat.chatName}</div>
+        </div>
         <div className={styles.users}>
           {selectedChat.users.map((user) => (
             <UserBadge

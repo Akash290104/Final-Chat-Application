@@ -160,14 +160,23 @@ const SignUp = () => {
               placeholder="Enter your password"
               ref={password}
             />
-            <button type="button" onClick={toggleVisibility1}>
-              {show1 ? "Hide" : "Show"}
-            </button>
+            <div className="input-group-append">
+              <button
+                type="button"
+                onClick={toggleVisibility1}
+                style={{
+                  backgroundColor: "#99ec2c",
+                }}
+              >
+                {show1 ? "Hide" : "Show"}
+              </button>
+            </div>
           </div>
           {errors.password && (
             <div className="text-danger">{errors.password}</div>
           )}
         </div>
+
         <div className="form-group mt-2 mb-2">
           <label htmlFor="confirmPassword">Confirm Password</label>
           <div className="input-group">
@@ -178,14 +187,23 @@ const SignUp = () => {
               placeholder="Confirm your password"
               ref={confirmPassword}
             />
-            <button type="button" onClick={toggleVisibility2}>
-              {show2 ? "Hide" : "Show"}
-            </button>
+            <div className="input-group-append">
+              <button
+                type="button"
+                onClick={toggleVisibility2}
+                style={{
+                  backgroundColor: "#99ec2c",
+                }}
+              >
+                {show2 ? "Hide" : "Show"}
+              </button>
+            </div>
           </div>
           {errors.confirmPassword && (
             <div className="text-danger">{errors.confirmPassword}</div>
           )}
         </div>
+
         <div className="form-group mt-2 mb-2">
           <label htmlFor="picture">Choose display picture</label>
           <input

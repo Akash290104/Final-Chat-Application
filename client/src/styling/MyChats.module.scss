@@ -1,47 +1,103 @@
-.container{
+/* Container styling */
+.container {
   height: 600px;
   width: 500px;
-  background-color: #5557d6;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 15px;
-  overflow-y:auto;
+  background: linear-gradient(135deg, #4c9dff, #2e8f7f); /* Softer blue-to-teal gradient */
+  // margin: 20px auto;
+  margin-left: 20px;
+  border-radius: 15px; /* More rounded corners for a soft look */
+  overflow-y: auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
 }
 
-.content{
-  padding: 10px;
+/* Content section styling */
+.content {
+  padding: 20px;
   width: 100%;
   height: 100px;
   display: flex;
-  background-color: #28c02d;
   justify-content: space-between;
+  align-items: center;
+  background-color: #1f8f5c; /* Deep green background for the header */
+  border-radius: 15px 15px 0 0;
+  color: #fff;
 }
 
-.text{
-  font-size: 1.5rem;
-  font-weight: 300;
+.text {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-.groupChatbtn{
-  button{
-    background-color: aqua;
+.groupChatbtn button {
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  background-color: #1ec6aa; /* Teal button */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.groupChatbtn button:hover {
+  background-color: #247a68; /* Darker teal on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+/* Chat sender styling */
+.senderContainer {
+  margin: 15px 5%;
+  width: 90%;
+  height: 50px;
+  background-color: #ffffff; /* Soft white background for chat items */
+  border-radius: 10px;
+  display: flex;
+  // justify-content: left;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333; /* Dark text for contrast */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease, color 0.2s ease;
+  border: 1px solid #d2d2d2; /* Soft border around each chat */
+}
+
+.senderContainer:hover {
+  background-color: #1f8f5c; /* Green on hover */
+  color: white; /* Text turns white on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.senderContainer.selected {
+  background-color: #32afc6; /* Highlight selected chat with a blue background */
+  color: #fff; /* Ensure text is readable on blue */
+}
+
+.senderText{
+  width: 100%;
+  margin-left: 10px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+
+  .groupChatbtn button {
+    font-size: 0.95rem;
+  }
+
+  .senderContainer {
+    font-size: 1rem;
   }
 }
-
-//For the senderChat
-.senderContainer{
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 10px;
-  width: 90%;
-  height: 40px;
-  // background-color: #32afc6
-  border-radius: 5px;
-  // padding: 10px;
-}
-
-// .senderList{
-//   width : 100%;
-//   height: 200px;
-//   padding: 5px;
-// }

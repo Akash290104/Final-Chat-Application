@@ -8,7 +8,7 @@ const Profilemodal = ({ onClose, onOpen, children, profile }) => {
       {children ? (
         <span onClick={onOpen}>{children}</span>
       ) : (
-        <div onClick={onOpen} className={styles.viewIcon}>
+        <div onClick={onOpen} className={styles.viewIcon} title="View Profile">
           <GrFormView />
         </div>
       )}

@@ -1,88 +1,128 @@
 .container {
   position: fixed;
-  top: 25px;
-  left: 35%;
-  width: 500px;
-  height: 610px;
-  background-color: #c36363;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  max-width: 90vw;
+  background-color: #f9f5ff;
+  box-shadow: 0 10px 25px rgba(75, 46, 131, 0.2);
   z-index: 1050;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
+.headingContainer{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+   
   .close {
-    text-align: right;
-    width: 100%;
-    height: 45px;
+    top: 5px;
+    right: 15px;
+    position: absolute;
+    width: 40px;
+    
+    button {
+      // background-color: red;
+      border-radius: 70%;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.2s;
+
+      color: #a78bfa;
+
+      &:hover {
+        color: #4b2e83;
+      }
+    }
   }
 }
 
 .backdrop {
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 1040;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .heading {
-  width: 80%;
-  height: 30px;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  // margin-top: 5px;
-  margin-left: 10%;
-  margin-right: 10%;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #4b2e83;
 }
 
-.nameField {
-  margin-top: 30px;
-  width: 100%;
-  height: 30px;
-
-  input {
-    font-size: 1.3rem;
-  }
-}
-
+.nameField,
 .usersField {
-  display: flex;
-  margin-top: 20px;
-  width: 70%;
-  height: 30px;
+  width: 100%;
 
   input {
-    font-size: 1.3rem;
-    margin-right: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #d6d3e5;
+    border-radius: 8px;
+    transition: border 0.2s;
+
+
+    &:focus {
+      border-color: #7c3aed;
+    }
   }
+}
+
+.badge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-height: 80px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #ede9fe;
+  border: 1px solid #d6d3e5;
+  border-radius: 10px;
+}
+
+.addUsers {
+  height: 230px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #f4f4ff;
+  border: 1px solid #d6d3e5;
+  color: #4b2e83; 
+  border-radius: 10px;
+  font-size: 0.95rem;
 }
 
 .createChat {
   width: 100%;
-  height: 40px;
-  margin-top: 25px;
   text-align: right;
-}
 
-.badge {
-  margin-top: 15px;
-  height: 60px;
-  max-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  overflow-y: auto;
-  padding: 5px;
-  background-color: rgb(213, 149, 71);
-}
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
 
-.addUsers {
-  margin-top: 25px;
-  width: 100%;
-  height: 230px;
-  padding: 5px;
-  background-color: #5ed3e0;
-  overflow-y: auto;
+    background-color: #7c3aed;
+
+    &:hover {
+      background-color: #6d28d9;
+    }
+  }
 }

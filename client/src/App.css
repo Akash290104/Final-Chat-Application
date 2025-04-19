@@ -1,9 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;1,300&display=swap');
-
-.App{
-   min-height: 100vh;
-   /* display: flex; */
-   background-image: url("./components/background.png");
-   background-size: cover;
-   background-position: center;
+.App {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f0f4ff, #d0e6f6);
+  font-family: "Work Sans", sans-serif;
 }

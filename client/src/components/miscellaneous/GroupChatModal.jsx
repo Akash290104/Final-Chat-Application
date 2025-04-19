@@ -127,6 +127,8 @@ const GroupChatModal = ({ children, hideGroupChatModal, socket }) => {
   return (
     <div className={styles.backdrop}>
       <div className={styles.container}>
+        <div className={styles.headingContainer}>
+        <div className={styles.heading}>Create Group Chat</div>
         <div className={styles.close}>
           <button
             onClick={() => {
@@ -137,7 +139,8 @@ const GroupChatModal = ({ children, hideGroupChatModal, socket }) => {
             X
           </button>
         </div>
-        <div className={styles.heading}>Create Group Chat</div>
+
+        </div>
         <div className={styles.nameField}>
           <input
             type="text"

@@ -1,14 +1,17 @@
-.viewIcon{
-  width : 100%;
-  height : 32px;
+.viewIcon {
   display: flex;
   align-items: center;
-  font-size: 1.3rem;
-  padding-left: 10px ;
-  // justify-content: center;
+  justify-content: flex-start;
+  height: 36px;
+  padding: 0 12px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  color: #34495e;
 }
 
- 
-.viewIcon:hover{
-  background-color: #f9f6f6f6;
+.viewIcon:hover {
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }

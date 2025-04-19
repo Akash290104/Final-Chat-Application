@@ -1,89 +1,170 @@
-
-.container{
+.container {
   top: 40px;
   left: 35%;
   width: 600px;
   height: 570px;
-  background-color: #dfa74b;
+  background-color: #b7c8d7; /* Coral color */
   z-index: 1050;
   position: fixed;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-out;
 }
 
-.backdrop{
-  top:0px;
-  left: 0px;
+.container:hover {
+  transform: scale(1.03);
+}
+
+.backdrop {
+  top: 0;
+  left: 0;
   position: fixed;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1045;
+  animation: fadeInBackdrop 0.4s ease-out;
 }
 
+@keyframes fadeInBackdrop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-.name{
-  width : 100%;
-  height : 50px;
+.heading {
+  width: 100%;
+  height: 80px;
   display: flex;
-  justify-content: center;
-  // background-color: #ab2da9;
+  align-items: center;
 }
 
-.closebtn{
-  width : 100%;
-  height: 20px;
+.name {
+  width: 100%;
+  height: 50%;
   text-align: right;
-}
-.chatname{
-  width : 100%;
+  // margin-right: 30%;
   display: flex;
   justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6f6e6e;
+  margin-bottom: 10px;
+  // transition: color 0.3s ease;
+  // background-color: aqua;
 }
-.users{
+
+// .name:hover {
+//   color: #f0e68c; /* Light Khaki color on hover */
+// }
+
+.closebtn {
+  top: 5px;
+  right: 15px;
+  position: absolute;
+  width: 40px;
+  // color: black;
+  // background-color: #fff;
+  button {
+    background-color: red;
+    border-radius: 70%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: rgb(2, 2, 2);
+  }
+}
+
+.closebtn:hover {
+  button {
+    color: #fff;
+  } /* Tomato color on hover */
+}
+
+.chatname {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.users {
   margin-top: 10px;
   padding: 5px 5px;
   border-radius: 10px;
-  width : 100%;
-  height : 60px;
+  width: 100%;
+  height: 70px;
   display: flex;
-  overflow-y:scroll;
-  background: #51cad5;
+  overflow-y: scroll;
+  flex-wrap: wrap;
+  // overflow-x: hidden;
+  background-color: #c7c0e9;
+  background: #1e90ff; /* Dodger Blue */
+  margin-bottom: 20px;
 }
 
-.nameUpdate{
+.nameUpdate {
   margin-top: 5%;
-  width : 100%;
-  height : 45px;
+  width: 100%;
+  height: 45px;
   display: flex;
   align-items: center;
-  padding: 5px 5px;
+  padding: 10px 10px;
   border-radius: 10px;
-  background-color: #58c281;
+  background-color: #cacfdc; /* Lime Green */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
 }
 
-.text{
-  width : 150px;
-  // height: 30px;
+.nameUpdate:hover {
+  background-color: #97aec6; /* Forest Green */
+}
+
+.text {
+  width: auto;
+  white-space: nowrap;
   font-size: 1.2rem;
   margin-right: 15px;
+  color: #fff;
 }
 
-.nameField{
-  width : 60%;
-  // height: 30px;
+.nameField {
+  width: 60%;
   font-size: 1.2rem;
   margin-right: 15px;
   border-radius: 10px;
+  padding: 8px;
+  // border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+
+  input {
+    border-radius: 10px;
+  }
 }
 
+.nameField:focus {
+  border-color: #6f86b7;
+}
 
-.updateBtn{
-  width : 20%;
+.updateBtn {
+  width: 20%;
   font-size: 1.2rem;
-  // height: 30px;
+  cursor: pointer;
+  background-color: #6d85c8;
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px;
+  // transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+// .updateBtn:hover {
+//   background-color: #a48877;
+//   transform: scale(1.05);
+// }
 
 .addUsers {
   margin-top: 25px;
@@ -92,31 +173,40 @@
   margin-right: 5%;
   height: 200px;
   padding: 5px 5px;
-  background-color: #d85f14;
+  background-color: #f4f4ff;
+  border: 1px solid #d6d3e5; /* Tomato color */
   border-radius: 10px;
   overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .customUser {
   border-radius: 8px;
   padding: 10px;
   margin-top: 8px;
-  width:90%;
+  width: 90%;
   margin-left: 5%;
   margin-right: 5%;
   height: 75px;
   display: flex;
-  background-color: #8ade2b;
+  background-color: #98fb98; /* Pale Green */
+  transition: transform 0.2s ease;
 }
+
+.customUser:hover {
+  transform: scale(1.02);
+  background-color: #32cd32;
+}
+
 .pic {
   border-radius: 50%;
   height: 60px;
-  width: 80px;
-  // background-color: #c750c1;
+  width: 60px;
+  overflow: hidden;
+  margin-right: 10px;
 
   img {
     height: 100%;
-    border-radius: 50%;
     width: 100%;
     object-fit: cover;
   }
@@ -124,61 +214,86 @@
 
 .details {
   position: relative;
-  width: 60%;
+  width: 70%;
   padding-top: 10px;
-  margin-left: 10px;
-  margin-right: 5px;
-  // height: 100%;
 }
 
-.name1{
+.name1 {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
 
+.mail {
   font-size: 1rem;
+  color: #888;
 }
 
-.mail{
-font-size: 1rem;
-}
-
-
-.badgecontainer{
+.badgecontainer {
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: 3%;
-  height : 45px;
-  width : 100px;
+  height: 45px;
+  min-width: 100px;
   display: flex;
-  background-color: #8f22ce;
+  background-color: #8f22ce; /* Purple */
   border-radius: 8px;
-
-  .badgecontent{
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    display: flex;
-    height: 60px;
-  }
+  transition: background-color 0.3s ease;
 }
 
-.badgename{
+.badgecontainer:hover {
+  background-color: #9b59b6; /* Amethyst */
+}
+
+.badgecontent {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  padding: 0 5px;
+}
+
+.badgename {
   font-size: 1.2rem;
-width: 60%;
-height: 50px;
+  color: #fff;
+  flex-grow: 1; /* Ensures it takes available space */
+  overflow: hidden;
+  text-overflow: ellipsis; /* In case name is too long */
 }
 
-.badgeclose{
-width: 40%;
-margin-top: 5px;
-height: 25px;
-background-color: #8ade2b;
-text-align: right;
-  
-  button{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-  }
+.badgeclose {
+  height: 25px;
+  width: 25px; /* Set width for the close button */
+  background-color: #8ade2b; /* Bright Green */
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.badgeclose:hover {
+  background-color: #6bbf1e; /* Lighter Green on hover */
+}
+
+button {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  // transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #32cd32;
 }

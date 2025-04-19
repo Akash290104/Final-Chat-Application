@@ -10,21 +10,23 @@ const Homepage = () => {
 
   const navigate = useNavigate();
   useEffect(() => {
-    const userInfo1 = localStorage.getItem("userInfo")
-    const userInfo = userInfo1? JSON.parse(userInfo1) : null
-    
+    const userInfo1 = localStorage.getItem("userInfo");
+    const userInfo = userInfo1 ? JSON.parse(userInfo1) : null;
+
     if (userInfo) {
       console.log("/chats");
     }
   }, [navigate]);
 
   return (
+    <div className={styles.wrapper}>
     <div className={styles.container}>
       <div className={styles.title}>Talk-A-Tive</div>
       <div className="access">
         <Tabs activeTab={activeTab} setActiveTab={setActiveTab} />
         {activeTab === "login" ? <Login /> : <SignUp />}
       </div>
+    </div>
     </div>
   );
 };

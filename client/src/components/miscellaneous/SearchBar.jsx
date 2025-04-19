@@ -144,7 +144,7 @@ const SearchBar = ({ isVisible, setIsVisible }) => {
       className={`${styles.container} ${isVisible ? styles.show : styles.hide}`}
     >
       <div className={styles.heading}>
-        <div className="text">Search Users</div>
+        <div className={styles.text}>Search Users</div>
         <div className={styles.close}>
           <button
             onClick={() => {

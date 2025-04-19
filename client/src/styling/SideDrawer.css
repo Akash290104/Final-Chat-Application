@@ -1,7 +1,7 @@
 
 .navbar{
   width: 100%;
-  background-color: #fff;
+  background-color: #c4d5ed;
   height : 60px;
   display: flex;
   justify-content: space-evenly;
@@ -13,9 +13,20 @@
   margin-left:  5px ;
 }
 
-.search-btn{
+.search-btn button {
+  background-color: #3182ce;
+  margin-left: 10px;
+  color: white;
+  border: none;
+  padding: 6px 12px;
   font-size: 1rem;
-  margin-left: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn button:hover {
+  background-color: #225ea8;
 }
 
 .search-bar{
